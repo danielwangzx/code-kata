@@ -1,0 +1,16 @@
+
+# Dockerfile located in solution_1
+
+FROM python:3.9-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+COPY . /app
+
+# Run unit tests during the build process
+RUN python -m unittest discover -s . -p "test_main.py"
+
+# Set the entry point to run the main script with current working directory logic
+CMD ["python", "main.py"]
