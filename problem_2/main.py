@@ -59,4 +59,4 @@ def parallel_anonymize(input_file, output_file):
             os.remove(f"{file}_anonymized.csv")
 
 if __name__ == "__main__":
-    parallel_anonymize('sample_data_2gb.csv', 'anonymized_data.csv')
+    parallel_anonymize('sample_data.csv', 'anonymized_data.csv')
